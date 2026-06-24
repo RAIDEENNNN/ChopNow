@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="description" content="Fresh Nigerian meals delivered to your door.">
+  <title>ChopNow — Food worth rushing home for</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhancements.css">
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> Taking dinner orders <span>•</span> Free Kent delivery above £30 <span>•</span> Kitchen closes 9:30 PM</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ChopNow home"><span class="brand-bowl">◡</span>CHOP<span>NOW</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#how">How it works</a><a href="#about">Our kitchen</a>
+    </nav>
+    <button class="cart-button" id="cart-button" aria-label="Open cart">Bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">COOKED IN KENT • DELIVERED HOT</p>
+        <h1>Your favourite<br>meal is <em>ready.</em></h1>
+        <p class="hero-sub">Proper comfort food, generous enough to satisfy, delivered without the app runaround.</p>
+        <div class="hero-actions"><a class="button primary" href="#menu">Choose your dinner <span>↓</span></a><a class="text-link" href="#favourites">See the crowd favourite →</a></div>
+        <div class="hero-facts"><span><b>35–50 min</b> typical delivery</span><span><b>Cooked today</b> in small batches</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration of a plate of Nigerian food">
+        <span class="scribble">made fresh<br>for you ↓</span>
+        <div class="plate"><div class="rice">••••<br>•••••</div><div class="chicken">♨</div><div class="plantain">◒ ◒ ◒</div><div class="greens">✽</div></div>
+        <div class="dish-note"><b>Jollof Supreme</b><span>Chicken • plantain • slaw</span><strong>£12.95</strong></div>
+      </div>
+    </section>
+
+    <section class="promise-strip" aria-label="Our promises"><span>✦ Cooked today</span><span>✦ Generous portions</span><span>✦ No hidden charges</span><span>✦ WhatsApp ordering</span></section>
+
+    <section class="favourites" id="favourites">
+      <div class="favourite-copy"><p class="eyebrow">CAN’T DECIDE?</p><h2>Start with the<br>house favourite.</h2><p>Smoky party jollof, charred chicken, sweet plantain and crisp slaw. The plate that built our regulars.</p><button class="button dark" data-quick-add="1">Add Jollof Supreme <span>£12.95 +</span></button></div>
+      <div class="favourite-quote"><span class="quote-mark">“</span><blockquote>It tastes like somebody’s favourite aunty cooked it—and refused to be stingy.</blockquote><p>— Nicole, Kent</p><div class="rating">★★★★★ <span>Most reordered this week</span></div></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h2>Pick your pleasure.</h2></div><p>Every meal is cooked today. Choose a favourite, add a side, and dinner is handled.</p></div>
+      <div class="menu-toolbar">
+        <div class="categories" id="categories" role="group" aria-label="Filter menu"></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search the menu" aria-label="Search the menu"></label>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No meals found. Try another search.</p>
+    </section>
+
+    <section class="how" id="how">
+      <div><p class="eyebrow">ZERO APP DRAMA</p><h2>Three steps.<br>Then you chop.</h2></div>
+      <ol><li><b>01</b><h3>Pick your food</h3><p>Add meals and extras to your bag.</p></li><li><b>02</b><h3>Send your order</h3><p>We prepare a neat WhatsApp message.</p></li><li><b>03</b><h3>Confirm &amp; relax</h3><p>We confirm payment and delivery with you.</p></li></ol>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-art"><div class="steam">〰<br>〰</div><span>GOOD<br>FOOD<br>ONLY.</span></div>
+      <div class="about-copy"><p class="eyebrow">FROM OUR KITCHEN</p><h2>No shortcuts.<br>No tiny portions.</h2><p>We started ChopNow because ordering food should feel warm and personal—not like fighting an app. Every pot is cooked in small batches with ingredients we would proudly serve at home.</p><a class="text-link" href="#menu">Find your next meal →</a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-bowl">◡</span>CHOP<span>NOW</span></a><p>Hot meals. Cool people. Kent, UK.</p><div><a href="#menu">Menu</a><a href="#how">How it works</a><a href="#about">Our kitchen</a></div><small>© <span id="year"></span> ChopNow Kitchen</small></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Your order" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR ORDER</p><h2>Good choices.</h2></div><button id="close-cart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>◡</span><h3>Your bag is hungry.</h3><p>Add something delicious from the menu.</p></div>
+    <div class="cart-summary" id="cart-summary" hidden><label>Delivery area<select id="delivery-area"></select></label><div><span>Food subtotal</span><b id="subtotal">£0.00</b></div><div><span>Delivery</span><b id="delivery-fee">£0.00</b></div><div class="total"><span>Total</span><b id="total">£0.00</b></div><button class="button primary checkout" id="checkout">Order on WhatsApp <span>↗</span></button><small>You’ll confirm your address and payment directly with us.</small></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Added to your bag</div>
+  <button class="mobile-bag" id="mobile-bag" aria-label="Open your bag"><span>View bag</span><b id="mobile-cart-total">£0.00</b></button>
+  <script src="app.js"></script>
+</body>
+</html>
